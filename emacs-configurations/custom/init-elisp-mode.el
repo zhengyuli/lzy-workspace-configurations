@@ -1,5 +1,5 @@
 ;;; package --- init-elisp-mode.el ---
-;; Time-stamp: <2018-12-10 18:42:17 Monday by lli>
+;; Time-stamp: <2018-12-13 16:42:06 Thursday by lli>
 
 ;; Copyright (C) 2014 zhengyu li
 ;;
@@ -37,6 +37,7 @@
 
   ;; Require
   (require 'eldoc)
+  (require 'paredit)
   (require 'elisp-slime-nav)
 
   ;; ----------------------------------------------------------
@@ -52,6 +53,7 @@
   ;; Hooks for `elisp-mode'
   (add-hook 'emacs-lisp-mode-hook (lambda ()
                                     (eldoc-mode 1)
+									(enable-paredit-mode)
                                     (turn-on-elisp-slime-nav-mode)
                                     (font-lock-add-keywords nil hexcolor-keywords))))
 

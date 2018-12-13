@@ -4,7 +4,7 @@
 # Name: install.sh
 # Purpose:
 #
-# Time-stamp: <2018-12-11 10:04:43 Tuesday by lli>
+# Time-stamp: <2018-12-11 10:59:17 Tuesday by lli>
 #
 # Author: zhengyu li
 # Created: 2014-03-26
@@ -61,11 +61,11 @@ if [ "$OS_NAME" != "mac" ]; then
 fi
 
 echo "Setup emacs configurations ... .. ."
-cp -f ${BASE_DIR}/emacs-configurations/init.el ${BASE_DIR}/.emacs.local
+cp -fv ${BASE_DIR}/emacs-configurations/init.el ${BASE_DIR}/.emacs.local
 sed -i -e s:_EMACS_CONFIG_ROOT_PATH_:${BASE_DIR}/emacs-configurations/:g ${BASE_DIR}/.emacs.local
 if [ -e $EMACS_CONFIG_FILE ]; then
     rm $EMACS_CONFIG_FILE
 fi
-ln -sf ${BASE_DIR}/.emacs.local $EMACS_CONFIG_FILE
+ln -sfv ${BASE_DIR}/.emacs.local $EMACS_CONFIG_FILE
 
 echo "Success!!"

@@ -1,5 +1,5 @@
 ;;; package --- init-dired.el ---
-;; Time-stamp: <2018-12-10 18:42:02 Monday by lli>
+;; Time-stamp: <2018-12-13 12:07:57 Thursday by lli>
 
 ;; Copyright (C) 2013 zhengyu li
 ;;
@@ -67,7 +67,7 @@
   (defun dired-up-directory-single ()
     "Return up directory in single window."
     (interactive)
-    (find-alternate-file ".."))
+    (dired-single-buffer ".."))
 
   (defun dired-backup-file ()
     "Backup file in current directory."

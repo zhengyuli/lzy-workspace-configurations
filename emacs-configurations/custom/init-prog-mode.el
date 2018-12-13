@@ -1,5 +1,5 @@
 ;;; package --- init-prog-mode.el ---
-;; Time-stamp: <2018-12-10 18:43:45 Monday by lli>
+;; Time-stamp: <2018-12-13 17:06:15 Thursday by lli>
 
 ;; Copyright (C) 2018 zhengyu li
 ;;
@@ -39,10 +39,13 @@
   (require 'linum)
   (require 'paren)
   (require 'autopair)
+  (require 'rainbow-delimiters)
   (require 'flycheck)
   (require 'xref)
   (require 'etags)
   (require 'quickrun)
+  (require 'aggressive-indent)
+  (require 'whitespace-cleanup-mode)
   (require 'lazy-set-key)
 
   ;; ----------------------------------------------------------
@@ -111,13 +114,11 @@
   ;; Hooks for `prog-mode'
   (add-hook 'prog-mode-hook
             (lambda ()
-              ;; Enable linum mode
               (linum-mode 1)
-              ;; Enable show paren mode
               (show-paren-mode 1)
-              ;; Enable autopair mode
               (autopair-mode 1)
-              ;; Enable flycheck mode
+              (rainbow-delimiters-mode 1)
+              (whitespace-cleanup-mode 1)
               (flycheck-mode 1))))
 
 (eval-after-load "prog-mode" '(prog-mode-settings))

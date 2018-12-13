@@ -1,6 +1,6 @@
 ;; -*- Emacs-Lisp -*-
 ;;; init.el ---
-;; Time-stamp: <2018-12-10 23:00:35 Monday by lli>
+;; Time-stamp: <2018-12-13 12:28:08 Thursday by lli>
 
 ;; Copyright (C) 2013 zhengyu li
 ;;
@@ -102,6 +102,7 @@ Look up all subdirs under `BASE-DIR' recrusively and add them into load path."
 (load-library "init-dockerfile-mode")
 (load-library "init-cmake-mode")
 (load-library "init-wangyi-music")
+(load-library "init-workgroups2")
 (load-library "init-theme")
 
 ;; Load user custom settings finally
@@ -110,5 +111,4 @@ Look up all subdirs under `BASE-DIR' recrusively and add them into load path."
   (load-file "~/.emacs.d/custom.el"))
 
 (toggle-fullscreen)
-
 ;;; init.el ends here
