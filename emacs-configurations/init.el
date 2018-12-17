@@ -1,6 +1,6 @@
 ;; -*- Emacs-Lisp -*-
 ;;; init.el ---
-;; Time-stamp: <2018-12-13 12:28:08 Thursday by lli>
+;; Time-stamp: <2018-12-17 15:09:04 Monday by lli>
 
 ;; Copyright (C) 2013 zhengyu li
 ;;
@@ -45,7 +45,7 @@
   "Emacs configuration site packages path.")
 
 ;; Emacs configuration default background
-(defconst emacs-config-default-background "#202020" "Emacs configuration default background.")
+(defconst emacs-config-default-background "#252525" "Emacs configuration default background.")
 
 ;; Emacs configuration default foreground
 (defconst emacs-config-default-foreground "#FFEFDF" "Emacs configuration default foreground.")
