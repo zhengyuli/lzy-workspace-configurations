@@ -1,5 +1,5 @@
 ;;; package --- init-python-mode.el ---
-;; Time-stamp: <2018-12-10 18:43:50 Monday by lli>
+;; Time-stamp: <2018-12-18 10:50:00 Tuesday by lli>
 
 ;; Copyright (C) 2014 zhengyu li
 ;;
@@ -37,11 +37,11 @@
 
   ;; Require
   (require 'py-yapf)
+  (require 'jedi-core)
+  (require 'company-jedi)
+  (require 'anaconda-mode)
   (require 'sphinx-doc)
   (require 'python-docstring)
-  (require 'jedi-core)
-  (require 'anaconda-mode)
-  (require 'company-anaconda)
   (require 'virtualenvwrapper)
 
   ;; ----------------------------------------------------------
@@ -62,8 +62,8 @@
      ("C-c C-c" . smart-comment)
      ("M-." . jedi:goto-definition)
      ("M-," . jedi:goto-definition-pop-marker)
-     ("M-r" . anaconda-mode-find-references)
-     ("M-*" . anaconda-mode-show-doc)
+     ("M-*" . jedi:show-doc)
+	 ("M-r" . anaconda-mode-find-references)
      ("C-c d f" . sphinx-doc-format))
    python-mode-map)
 
@@ -72,8 +72,7 @@
   (add-hook 'python-mode-hook
             (lambda ()
               (make-local-variable 'company-backends)
-              (add-to-list 'company-backends (append-backend-with-yas 'company-anaconda))
-              (anaconda-mode 1)
+              (add-to-list 'company-backends (append-backend-with-yas 'company-jedi))
               (sphinx-doc-mode 1)
               (python-docstring-mode 1)
               (venv-initialize-interactive-shells))))
