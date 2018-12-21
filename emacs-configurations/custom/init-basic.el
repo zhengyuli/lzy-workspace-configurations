@@ -1,5 +1,5 @@
 ;;; package --- init-basic.el ---
-;; Time-stamp: <2018-12-10 18:40:59 Monday by lli>
+;; Time-stamp: <2018-12-21 10:11:44 Friday by lli>
 
 ;; Copyright (C) 2013 zhengyu li
 ;;
@@ -29,6 +29,7 @@
 ;;   (require 'init-basic)
 
 ;;; Require:
+(require 'epa)
 (require 'recentf)
 (require 'time-stamp)
 (require 'goto-chg)
@@ -146,6 +147,9 @@
 
 ;; Enable version numbers for backup files
 (customize-set-variable 'version-control t)
+
+;; Query passphrase through the minibuffer
+(customize-set-variable 'epa-pinentry-mode 'loopback)
 
 ;; Set maximum number of items of the recent list to 1000
 (customize-set-variable 'recentf-max-saved-items 1000)

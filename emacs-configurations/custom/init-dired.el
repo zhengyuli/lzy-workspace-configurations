@@ -1,5 +1,5 @@
 ;;; package --- init-dired.el ---
-;; Time-stamp: <2018-12-13 12:07:57 Thursday by lli>
+;; Time-stamp: <2018-12-21 14:24:42 Friday by lli>
 
 ;; Copyright (C) 2013 zhengyu li
 ;;
@@ -37,9 +37,10 @@
   "Settings for `dired'."
 
   ;; Require
-  (require 'dired-x)
+  (require 'epa)
   (require 'wget)
   (require 'ztree)
+  (require 'dired-x)
   (require 'dired-async)
   (require 'dired-single)
   (require 'dired-filter)
@@ -190,7 +191,12 @@ If `WITH-FULL-PATH' is t and `ONLY-PATH' is t, return only file path."
 
   ;; Key bindings for `dired-mode-map'
   (lazy-set-key
-   '(("w" . wget)
+   '(("0" . dired-smart-shell-command)
+     ("1" . delete-other-windows)
+     ("2" . split-window-vertically)
+     ("3" . split-window-horizontally)
+     ("o" . other-window)
+	 ("w" . wget)
      ("r" . wdired-change-to-wdired-mode)
      ("D" . ztree-diff)
      ("<return>" . dired-single-buffer)
@@ -208,12 +214,7 @@ If `WITH-FULL-PATH' is t and `ONLY-PATH' is t, return only file path."
      ("k" . kill-this-buffer)
      ("B" . dired-backup-file)
      ("E" . dired-do-touch)
-     ("j" . dired-goto-file)
-     ("0" . dired-smart-shell-command)
-     ("1" . delete-other-windows)
-     ("2" . split-window-vertically)
-     ("3" . split-window-horizontally)
-     ("o" . other-window)
+     ("j" . dired-find-file)
      ("?" . dired-get-size)
      ("M-," . dired-goto-first-line)
      ("M-." . dired-goto-last-line)
@@ -221,6 +222,7 @@ If `WITH-FULL-PATH' is t and `ONLY-PATH' is t, return only file path."
      ("<up>" . dired-hacks-previous-file)
      ("n" . dired-hacks-next-file)
      ("<down>" . dired-hacks-next-file)
+	 ("z" . dired-do-compress)
      ("M-w" . dired-copy-paste-do-copy)
      ("M-k" . dired-copy-paste-do-cut)
      ("C-y" . dired-copy-paste-do-paste)
