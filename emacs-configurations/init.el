@@ -1,6 +1,6 @@
 ;; -*- Emacs-Lisp -*-
 ;;; init.el ---
-;; Time-stamp: <2018-12-17 15:09:04 Monday by lli>
+;; Time-stamp: <2019-03-14 15:06:03 Thursday by lli>
 
 ;; Copyright (C) 2013 zhengyu li
 ;;
@@ -81,11 +81,11 @@ Look up all subdirs under `BASE-DIR' recrusively and add them into load path."
 (load-library "init-eperiodic")
 (load-library "init-google-translate")
 (load-library "init-visual-regex")
-(load-library "init-helm")
 (load-library "init-dired")
 (load-library "init-tramp")
 (load-library "init-emms")
 (load-library "init-w3m")
+(load-library "init-ivy-mode")
 (load-library "init-magit")
 (load-library "init-view-mode")
 (load-library "init-hexview-mode")

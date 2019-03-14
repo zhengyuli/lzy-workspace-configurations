@@ -1,7 +1,7 @@
-;;; package --- init-helm.el ---
-;; Time-stamp: <2018-12-10 18:42:52 Monday by lli>
+;;; package --- init-ivy-mode.el ---
+;; Time-stamp: <2019-03-14 15:16:44 Thursday by lli>
 
-;; Copyright (C) 2015 zhengyu li
+;; Copyright (C) 2013 zhengyu li
 ;;
 ;; Author: zhengyu li <lizhengyu419@gmail.com>
 ;; Keywords: none
@@ -26,27 +26,37 @@
 ;;
 
 ;; Put this file into your load-path and the following into your ~/.emacs:
-;;   (require 'init-helm)
+;;   (require 'init-ivy-mode)
 
 ;;; Require:
-(require 'helm-config)
+(require 'ivy)
+(require 'swiper)
+(require 'counsel)
 (require 'lazy-set-key)
 
 ;;; Code:
 ;; ==================================================================================
-;; Global key bindings for `helm'
-(lazy-set-key
- '(("M-x" . helm-M-x)
-   ("C-x C-f" . helm-find-files)
-   ("C-x b" . helm-buffers-list)
-   ("C-x B" . helm-recentf)))
+;; Customize ivy related variables
+(customize-set-variable 'ivy-use-virtual-buffers t)
+(customize-set-variable 'ivy-height 10)
+(customize-set-variable 'ivy-count-format "")
+(customize-set-variable 'ivy-initial-inputs-alist nil)
+(customize-set-variable 'ivy-re-builders-alist '((t . ivy--regex-ignore-order)))
 
 ;; ==================================================================================
-;; Enable global helm mode
-(helm-mode 1)
+;; Global key bindings for `ivy'
+(lazy-set-key
+ '(("M-x" . counsel-M-x)
+   ("C-x C-f" . counsel-find-file)
+   ("C-x b" . ivy-switch-buffer)
+   ("C-x B" . counsel-recentf)))
+
+;; ==================================================================================
+;; Enable global ivy mode
+(ivy-mode 1)
 
 ;; ==================================================================================
 ;;; Provide features
-(provide 'init-helm)
+(provide 'init-ivy-mode)
 
-;;; init-helm.el ends here
+;;; init-ivy-mode.el ends here

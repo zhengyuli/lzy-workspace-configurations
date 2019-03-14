@@ -1,5 +1,5 @@
 ;;; package --- init-basic.el ---
-;; Time-stamp: <2018-12-21 10:11:44 Friday by lli>
+;; Time-stamp: <2019-03-14 11:53:25 Thursday by lli>
 
 ;; Copyright (C) 2013 zhengyu li
 ;;
@@ -166,6 +166,8 @@
 ;; Exec path hack for mac system
 (when (memq window-system '(mac ns))
   (require 'exec-path-from-shell)
+  (setq mac-command-modifier 'super)
+  (setq mac-option-modifier 'meta)
   (exec-path-from-shell-initialize))
 
 ;; ==================================================================================
@@ -193,6 +195,9 @@
 ;; ==================================================================================
 ;; Disable blink cursor mode
 (blink-cursor-mode -1)
+
+;; Disable tool bar mode
+(tool-bar-mode -1)
 
 ;; Disable scroll bar mode
 (scroll-bar-mode -1)
