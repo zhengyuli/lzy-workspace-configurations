@@ -1,5 +1,5 @@
 ;;; package --- init-elisp-mode.el ---
-;; Time-stamp: <2018-12-13 16:42:06 Thursday by lli>
+;; Time-stamp: <2019-03-27 11:42:02 Wednesday by lli>
 
 ;; Copyright (C) 2014 zhengyu li
 ;;
@@ -39,6 +39,7 @@
   (require 'eldoc)
   (require 'paredit)
   (require 'elisp-slime-nav)
+  (require 'lisp-extra-font-lock)
 
   ;; ----------------------------------------------------------
   ;; Font lock keyword for hexcolor
@@ -53,9 +54,10 @@
   ;; Hooks for `elisp-mode'
   (add-hook 'emacs-lisp-mode-hook (lambda ()
                                     (eldoc-mode 1)
+									(lisp-extra-font-lock-mode 1)
+									(font-lock-add-keywords nil hexcolor-keywords)
 									(enable-paredit-mode)
-                                    (turn-on-elisp-slime-nav-mode)
-                                    (font-lock-add-keywords nil hexcolor-keywords))))
+                                    (turn-on-elisp-slime-nav-mode))))
 
 (eval-after-load "elisp-mode" '(elisp-mode-settings))
 
