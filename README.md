@@ -1,6 +1,6 @@
 # LZY Workspace Configurations
 
-This documentation is used to setup an efficient workspace which includes all kinds of daily used tools for me on mac platform. 
+This documentation will guide you to setup an efficient workspace which includes all kinds of daily used tools on mac platform.
 
 ## Homebrew
 
@@ -59,7 +59,7 @@ Import Solarized dark theme through _iTerm2 > Preferences > Profiles > Colors > 
 Configure shortcuts through _iTerm2 > Preferences > Keys > Key Mappings_ panel.
 
 | Action       | Key Mapping |
-|--------------|-------------|
+|:-------------|:------------|
 | Previous Tab | ⇧⌘P         |
 | Next Tab     | ⇧⌘N         |
 
@@ -267,6 +267,9 @@ $ go get golang.org/x/tools/cmd/guru
 $ pip install yapf
 $ pip install jedi
 $ pip install epc
+
+# For easypg
+$ brew install gnupg
 ```
 
 #### Customization

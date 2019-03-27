@@ -1,6 +1,6 @@
 ;; -*- Emacs-Lisp -*-
 ;;; init.el ---
-;; Time-stamp: <2019-03-14 15:06:03 Thursday by lli>
+;; Time-stamp: <2019-03-27 11:27:51 Wednesday by lli>
 
 ;; Copyright (C) 2013 zhengyu li
 ;;
@@ -111,4 +111,5 @@ Look up all subdirs under `BASE-DIR' recrusively and add them into load path."
   (load-file "~/.emacs.d/custom.el"))
 
 (toggle-fullscreen)
+
 ;;; init.el ends here

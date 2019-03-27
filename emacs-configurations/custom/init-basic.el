@@ -1,5 +1,5 @@
 ;;; package --- init-basic.el ---
-;; Time-stamp: <2019-03-14 11:53:25 Thursday by lli>
+;; Time-stamp: <2019-03-27 10:51:54 Wednesday by lli>
 
 ;; Copyright (C) 2013 zhengyu li
 ;;
@@ -156,6 +156,12 @@
 
 ;; Exclude tmp and remote items from recent list
 (customize-set-variable 'recentf-exclude '("/tmp/" "ssh:"))
+
+;; Customize user full name
+(customize-set-variable 'user-full-name "zhengyu li")
+
+;; Customize user mail address
+(customize-set-variable 'user-mail-address "lizhengyu419@outlook.com")
 
 ;; Replace yes-or-no-p with y-or-no-p
 (fset 'yes-or-no-p 'y-or-n-p)
