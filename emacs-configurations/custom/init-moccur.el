@@ -1,5 +1,5 @@
 ;;; package --- init-moccur.el ---
-;; Time-stamp: <2018-12-13 11:40:06 Thursday by lli>
+;; Time-stamp: <2019-07-11 10:58:26 Thursday by lli>
 
 ;; Copyright (C) 2013 zhengyu li
 ;;
@@ -57,7 +57,13 @@
   (customize-set-variable 'dmoccur-exclusion-mask (remove "\\.git/.+" dmoccur-exclusion-mask))
   (customize-set-variable 'dmoccur-exclusion-mask (remove "CVS/.+" dmoccur-exclusion-mask))
   (customize-set-variable 'dmoccur-exclusion-mask (append dmoccur-exclusion-mask '("/\\.svn/.+" "/\\.git/.+" "/CVS/.+")))
-  (customize-set-variable 'moccur-edit-highlight-edited-text t))
+  (customize-set-variable 'moccur-edit-highlight-edited-text t)
+
+  ;; ----------------------------------------------------------
+  ;; Key bindings for `moccur-mode-map'
+  (lazy-set-key
+   '(("o" . moccur-grep-goto))
+   moccur-mode-map))
 
 (eval-after-load "color-moccur" '(moccur-settings))
 
