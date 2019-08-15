@@ -123,7 +123,7 @@ plugins=(
 )
 
 # Key bindings for autosuggestions plugin
-bindkey ',' autosuggest-accept
+bindkey '^],' autosuggest-accept
 ```
 
 #### Themes
