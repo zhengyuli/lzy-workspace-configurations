@@ -190,6 +190,10 @@ Use Homebrew to download and install:
 
 ```
 $ brew install pyenv
+
+# Install your prefered python version
+$ pyenv install 2.7.15
+$ pyenv install 3.7.0
 ```
 
 ### Customization
@@ -218,6 +222,9 @@ Append the following to your ~/.env.sh script
 ```
 # Settings for pyenv-virtualenvwrapper
 export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
+
+# Activate virtualenvwrapper
+pyenv shell 2.7.15
 pyenv virtualenvwrapper
 ```
 
