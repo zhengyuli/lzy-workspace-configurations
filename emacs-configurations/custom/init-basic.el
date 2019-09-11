@@ -1,5 +1,5 @@
 ;;; package --- init-basic.el ---
-;; Time-stamp: <2019-03-27 10:51:54 Wednesday by lli>
+;; Time-stamp: <2019-09-06 11:26:58 Friday by lli>
 
 ;; Copyright (C) 2013 zhengyu li
 ;;
@@ -197,6 +197,7 @@
 ;; ==================================================================================
 ;; Hooks for `basic'
 (add-hook 'write-file-hooks 'time-stamp)
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;; ==================================================================================
 ;; Disable blink cursor mode

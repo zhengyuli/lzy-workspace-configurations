@@ -286,5 +286,3 @@ Running _./install.sh_ to setup emacs configurations.
 ```
 $ ./install.sh
 ```
-
-
