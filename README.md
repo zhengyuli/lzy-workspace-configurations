@@ -228,6 +228,15 @@ pyenv shell 2.7.15
 pyenv virtualenvwrapper
 ```
 
+Append the following to your ~/.virtualenvs/postmkvirtualenv
+
+```
+# Dependencies for emacs python mode
+pip install yapf
+pip install jedi
+pip install epc
+```
+
 ## Python
 
 macOS, like Linux, ships with Python already installed. But you don't want to mess with the system Python (some system tools rely on it, etc.), so we'll install our own version(s). There are two ways to install Python, (1) Homebrew and (2) Pyenv. If you plan to use multiple versions of Python (e.g. 2, 3, and anaconda) then you should use pyenv.
@@ -259,23 +268,23 @@ $ brew untap railwaycat/emacsmacport
 **Installing dependencies**
 
 ```
-# For multimedia plugins
+# Plugins for multimedia
 $ brew install mplayer
 
-# For w3m plugin
+# Plugin for w3m
 $ brew install w3m
 
-# For go mode plugin
+# Plugins for go mode
 $ go get github.com/rogpeppe/godef
 $ go get golang.org/x/tools/cmd/gorename
 $ go get golang.org/x/tools/cmd/guru
 
-# For python mode plugin
+# Plugins for python mode
 $ pip install yapf
 $ pip install jedi
 $ pip install epc
 
-# For easypg
+# Plugins for easypg
 $ brew install gnupg
 ```
 
