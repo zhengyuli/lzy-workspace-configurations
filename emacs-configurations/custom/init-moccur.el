@@ -1,5 +1,5 @@
 ;;; package --- init-moccur.el ---
-;; Time-stamp: <2019-07-11 10:58:26 Thursday by lli>
+;; Time-stamp: <2019-09-18 16:27:34 Wednesday by lli>
 
 ;; Copyright (C) 2013 zhengyu li
 ;;
@@ -49,7 +49,7 @@
   ;; Customize moccur related faces
   (custom-set-faces '(moccur-face ((t (:background "#EEEE00" :foreground "#000000" :weight bold)))))
   (custom-set-faces '(moccur-current-line-face ((t (:background "#4D4D4D")))))
-  
+
   ;; Customize moccur related variables
   (customize-set-variable 'moccur-kill-moccur-buffer t)
   (customize-set-variable 'moccur-grep-default-word-near-point t)
@@ -57,13 +57,7 @@
   (customize-set-variable 'dmoccur-exclusion-mask (remove "\\.git/.+" dmoccur-exclusion-mask))
   (customize-set-variable 'dmoccur-exclusion-mask (remove "CVS/.+" dmoccur-exclusion-mask))
   (customize-set-variable 'dmoccur-exclusion-mask (append dmoccur-exclusion-mask '("/\\.svn/.+" "/\\.git/.+" "/CVS/.+")))
-  (customize-set-variable 'moccur-edit-highlight-edited-text t)
-
-  ;; ----------------------------------------------------------
-  ;; Key bindings for `moccur-mode-map'
-  (lazy-set-key
-   '(("o" . moccur-grep-goto))
-   moccur-mode-map))
+  (customize-set-variable 'moccur-edit-highlight-edited-text t))
 
 (eval-after-load "color-moccur" '(moccur-settings))
 
