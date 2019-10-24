@@ -1,5 +1,5 @@
 ;;; package --- init-go-mode.el ---
-;; Time-stamp: <2018-12-10 18:42:36 Monday by lli>
+;; Time-stamp: <2019-10-24 16:20:26 Thursday by lli>
 
 ;; Copyright (C) 2015 zhengyu li
 ;;
@@ -38,6 +38,12 @@
 
   ;; Require
   (require 'go-eldoc)
+
+  ;; ----------------------------------------------------------
+  ;; Load golang related envs
+  (when (memq window-system '(mac ns))
+	(require 'exec-path-from-shell)
+	(exec-path-from-shell-copy-env "GOPATH"))
 
   ;; ----------------------------------------------------------
   ;; Key bindings for `go-mode-map'

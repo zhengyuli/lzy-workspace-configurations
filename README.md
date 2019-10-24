@@ -48,6 +48,7 @@ $ brew cask install iterm2
 
 Download Solarized theme for iTerm2:
 
+
 ```
 $ git clone https://github.com/altercation/solarized
 ```
@@ -69,21 +70,16 @@ The Z shell (also known as zsh) is a Unix shell that is built on top of bash (th
 
 ### Installation
 
-**Install zsh using Homebrew:**
+Use Homebrew to download and install:
 
 ```
 $ brew install zsh
 ```
 
-**Install Oh My Zsh:**
+Install Oh My Zsh:
 
 ```
 $ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-```
-
-**Notice:** the installation script should set zsh to your default shell, but if it doesn't you can do it manually.
-
-```
 $ chsh -s $(which zsh)
 ```
 
@@ -96,14 +92,14 @@ The out-of-the-box configuration is usable but you probably want to customise it
 Standard plugins can be found in ~/.oh-my-zsh/plugins/*, custom plugins may be added to ~/.oh-my-zsh/custom/plugins/. Add plugins to your shell by adding the name of the plugin to the plugin array in your **~/.zshrc**.
 Add wisely, as too many plugins slow down shell startup.
 
-**Download custom plugins**
+Download custom plugins:
 
 ```
 git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 ```
 
-**Add daily used plguins**
+Add daily used plguins:
 
 ```
 # Which plugins would you like to load?
@@ -140,7 +136,7 @@ ZSH_THEME="sonicradish"
 
 #### env.sh
 
-Create a new .env.sh under your home directory with the following.
+Create a new .env.sh under your home directory with the following:
 
 ```
 #!/bin/zsh
@@ -149,7 +145,7 @@ Create a new .env.sh under your home directory with the following.
 export HOMEBREW_NO_AUTO_UPDATE="true"
 ```
 
-To include _.env.sh_, open _~/.zshrc_ and add the following:
+Add _.env.sh_ into _~/.zshrc_:
 
 ```
 source ~/.env.sh
@@ -162,15 +158,17 @@ Go is an open source programming language that makes it easy to build simple, re
 
 ### Installation
 
-Download the latest version from [https://golang.org/dl/]() and install manually, after installation you should create the directory for _$GOPATH_ which will be used as the golang project workspace.
+Download the latest version from [https://golang.org/dl/]() and install manually.
+
+### Customization
+
+Create golang workspace:
 
 ```
 $ mkdir -p $HOME/MyGoProjects
 ```
 
-### Customization
-
-Append the following to your ~/.env.sh script
+Append the following to your ~/.env.sh script:
 
 ```
 # Settings for golang
@@ -178,6 +176,14 @@ export GOPATH=$HOME/MyGoProjects
 
 # Update $PATH
 export PATH=$GOPATH/bin:$HOME/bin:/usr/local/bin:$PATH
+```
+
+Install golang related dependencies:
+
+```
+go get golang.org/x/tools/cmd/godoc
+go get github.com/rogpeppe/godef
+go get github.com/nsf/gocode
 ```
 
 ## Pyenv
@@ -198,7 +204,7 @@ $ pyenv install 3.7.0
 
 ### Customization
 
-Append the following to your ~/.env.sh script
+Append the following to your ~/.env.sh script:
 
 ```
 # Settings for pyenv
@@ -217,7 +223,7 @@ $ brew install pyenv-virtualenvwrapper
 
 ### Customization
 
-Append the following to your ~/.env.sh script
+Append the following to your ~/.env.sh script:
 
 ```
 # Settings for pyenv-virtualenvwrapper
@@ -228,7 +234,7 @@ pyenv shell 2.7.15
 pyenv virtualenvwrapper
 ```
 
-Append the following to your ~/.virtualenvs/postmkvirtualenv
+Append the following to your ~/.virtualenvs/postmkvirtualenv:
 
 ```
 # Dependencies for emacs python mode
@@ -257,7 +263,7 @@ Emacs is an extensible, customizable, free/libre text editor — and more.
 
 ### Installation
 
-**Using homebrew to download and install:**
+Using homebrew to download and install:
 
 ```
 $ brew tap railwaycat/emacsmacport
@@ -265,7 +271,7 @@ $ brew cask install emacs-mac
 $ brew untap railwaycat/emacsmacport
 ```
 
-**Installing dependencies**
+Installing emacs related dependencies:
 
 ```
 # Plugins for multimedia
@@ -290,7 +296,7 @@ $ brew install gnupg
 
 #### Customization
 
-Running _./install.sh_ to setup emacs configurations.
+Running _./install.sh_ to setup emacs configurations:
 
 ```
 $ ./install.sh
