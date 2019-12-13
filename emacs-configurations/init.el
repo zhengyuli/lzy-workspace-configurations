@@ -1,6 +1,6 @@
 ;; -*- Emacs-Lisp -*-
 ;;; init.el ---
-;; Time-stamp: <2019-09-11 10:38:51 Wednesday by lli>
+;; Time-stamp: <2019-12-09 17:20:35 Monday by lli>
 
 ;; Copyright (C) 2013 zhengyu li
 ;;
@@ -93,6 +93,7 @@ Look up all subdirs under `BASE-DIR' recrusively and add them into load path."
 (load-library "init-prog-mode")
 (load-library "init-elisp-mode")
 (load-library "init-cc-mode")
+(load-library "init-haskell-mode")
 (load-library "init-go-mode")
 (load-library "init-sh-script-mode")
 (load-library "init-python-mode")
