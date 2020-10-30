@@ -1,5 +1,5 @@
 ;;; package --- init-company-mode.el ---
-;; Time-stamp: <2018-12-10 18:41:33 Monday by lli>
+;; Time-stamp: <2020-10-30 14:58:01 Friday by lizhengyu>
 
 ;; Copyright (C) 2018 zhengyu li
 ;;
@@ -31,6 +31,7 @@
 ;;; Require:
 (require 'company)
 (require 'company-quickhelp)
+(require 'company-quickhelp-terminal)
 (require 'company-yasnippet)
 
 ;;; Code:
@@ -49,7 +50,7 @@
 ;; Customize company related faces
 (custom-set-faces '(company-tooltip ((t :background "#4D4D4D" ))))
 (custom-set-faces '(company-tooltip-selection ((t :background "#8b0000"))))
-(custom-set-faces '(company-tooltip-common ((t :foreground "#FF0000"))))
+(custom-set-faces '(company-tooltip-common ((t :foreground "#0000FF"))))
 (custom-set-faces '(company-scrollbar-fg ((t :inherit company-tooltip))))
 (custom-set-faces '(company-scrollbar-bg ((t :inherit company-tooltip))))
 
@@ -66,7 +67,10 @@
 (global-company-mode 1)
 
 ;; Enable global company quickhelp mode
-(company-quickhelp-mode 1)
+(if (display-graphic-p)
+	(company-quickhelp-mode 1)
+  (company-quickhelp-terminal-mode 1))
+
 
 ;; ==================================================================================
 ;;; Provide features

@@ -1,5 +1,5 @@
 ;;; package --- init-c&c++-mode.el ---
-;; Time-stamp: <2020-10-30 13:29:34 Friday by lizhengyu>
+;; Time-stamp: <2020-10-30 14:48:36 Friday by lizhengyu>
 
 ;; Copyright (C) 2014 zhengyu li
 ;;
@@ -45,32 +45,24 @@
   ;; Customize c&c++ mode related variables
   (customize-set-variable 'ctypes-file-name "~/.emacs.d/ctypes")
   (customize-set-variable 'ctypes-write-types-at-exit t)
-  ;; (customize-set-variable 'rtags-completions-enabled t)
-  ;; (customize-set-variable 'rtags-autostart-diagnostics t)
+  (customize-set-variable 'rtags-completions-enabled t)
+  (customize-set-variable 'rtags-autostart-diagnostics t)
 
   ;; Enable google style newline indent
   (google-make-newline-indent)
 
   ;; ----------------------------------------------------------
   ;; Hooks for `c-mode' and `c++-mode'
-  (add-hook 'c-mode-hook (lambda ()
-                           (ctypes-auto-parse-mode 1)
-                           (ctypes-read-file nil nil t t)
-						   (rtags-diagnostics t)
-						   (make-local-variable 'company-backends)
-						   (add-to-list 'company-backends (append-backend-with-yas 'company-rtags))
-						   (rtags-start-process-unless-running)
-						   (rtags-xref-enable)
-                           (google-set-c-style)))
-  (add-hook 'c++-mode-hook (lambda ()
-                           (ctypes-auto-parse-mode 1)
-                           (ctypes-read-file nil nil t t)
-						   (rtags-diagnostics t)
-						   (make-local-variable 'company-backends)
-						   (add-to-list 'company-backends (append-backend-with-yas 'company-rtags))
-						   (rtags-start-process-unless-running)
-						   (rtags-xref-enable)
-                           (google-set-c-style))))
+  (dolist (hook '(c-mode-hook c++-mode-hook))
+	(add-hook hook (lambda ()
+					 (ctypes-auto-parse-mode 1)
+					 (ctypes-read-file nil nil t t)
+					 (rtags-diagnostics t)
+					 (make-local-variable 'company-backends)
+					 (add-to-list 'company-backends (append-backend-with-yas 'company-rtags))
+					 (rtags-start-process-unless-running)
+					 (rtags-xref-enable)
+					 (google-set-c-style)))))
 
 (eval-after-load "cc-mode" '(c&c++-mode-settings))
 
