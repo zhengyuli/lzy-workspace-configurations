@@ -1,5 +1,5 @@
 ;;; package --- init-prog-mode.el ---
-;; Time-stamp: <2018-12-13 17:06:15 Thursday by lli>
+;; Time-stamp: <2020-10-30 12:40:15 Friday by lizhengyu>
 
 ;; Copyright (C) 2018 zhengyu li
 ;;
@@ -105,6 +105,7 @@
      ("C-]" . jump-to-matched-paren)
      ("<f7>" . visit-tags-table)
      ("C-<f7>" . generate-tag-table)
+	 ("M-r" . xref-find-references)
      ("M-." . xref-find-definitions)
      ("M-," . xref-pop-marker-stack)
      ("C-0" . quickrun))

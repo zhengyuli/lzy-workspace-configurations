@@ -1,6 +1,6 @@
 ;; -*- Emacs-Lisp -*-
 ;;; init.el ---
-;; Time-stamp: <2020-07-18 19:13:55 Saturday by zhengyuli>
+;; Time-stamp: <2020-10-30 11:03:34 Friday by lizhengyu>
 
 ;; Copyright (C) 2013 zhengyu li
 ;;
@@ -93,6 +93,7 @@ Look up all subdirs under `BASE-DIR' recrusively and add them into load path."
 (load-library "init-prog-mode")
 (load-library "init-elisp-mode")
 (load-library "init-cc-mode")
+(load-library "init-c&c++-mode")
 (load-library "init-haskell-mode")
 (load-library "init-go-mode")
 (load-library "init-scala-mode")

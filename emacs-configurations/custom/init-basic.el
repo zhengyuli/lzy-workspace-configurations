@@ -1,5 +1,5 @@
 ;;; package --- init-basic.el ---
-;; Time-stamp: <2019-09-06 11:26:58 Friday by lli>
+;; Time-stamp: <2020-10-29 14:17:05 Thursday by lizhengyu>
 
 ;; Copyright (C) 2013 zhengyu li
 ;;
@@ -208,6 +208,9 @@
 
 ;; Disable scroll bar mode
 (scroll-bar-mode -1)
+
+;; Disable global menu bar mode
+(menu-bar-mode -1)
 
 ;; Enable cursor type change when idle
 (toggle-cursor-type-when-idle 1)

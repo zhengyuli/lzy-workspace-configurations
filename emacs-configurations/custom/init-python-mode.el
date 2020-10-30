@@ -1,5 +1,5 @@
 ;;; package --- init-python-mode.el ---
-;; Time-stamp: <2018-12-18 10:50:00 Tuesday by lli>
+;; Time-stamp: <2020-10-30 12:44:39 Friday by lizhengyu>
 
 ;; Copyright (C) 2014 zhengyu li
 ;;
@@ -60,10 +60,10 @@
   (lazy-set-key
    '(("C-c C-f" . template-expand-template)
      ("C-c C-c" . smart-comment)
+	 ("M-r" . anaconda-mode-find-references)
      ("M-." . jedi:goto-definition)
      ("M-," . jedi:goto-definition-pop-marker)
      ("M-*" . jedi:show-doc)
-	 ("M-r" . anaconda-mode-find-references)
      ("C-c d f" . sphinx-doc-format))
    python-mode-map)
 
