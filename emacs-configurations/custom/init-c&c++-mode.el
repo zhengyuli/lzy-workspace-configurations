@@ -1,5 +1,5 @@
 ;;; package --- init-c&c++-mode.el ---
-;; Time-stamp: <2020-10-30 14:48:36 Friday by lizhengyu>
+;; Time-stamp: <2020-10-30 17:05:24 Friday by lizhengyu>
 
 ;; Copyright (C) 2014 zhengyu li
 ;;
@@ -50,6 +50,21 @@
 
   ;; Enable google style newline indent
   (google-make-newline-indent)
+
+  ;; ----------------------------------------------------------
+  ;; Custom functions
+  (defun rtags-cmake-export-commands (root-dir)
+	"Call `cmake' to export compilation commands for rtags to index."
+	(interactive (list (read-directory-name "Project root directory: " "./")))
+	(shell-command (concat "cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1 " root-dir) nil "*Cmake Export Errors*"))
+
+  (defun rtags-index-project (root-dir)
+	"Call `rtags-rc' to index project."
+	(interactive (list (read-directory-name "Project root directory: " "./")))
+	(let ((rtags-exec-path (if (rtags-executable-find "rc")
+							   (rtags-executable-find "rc")
+							 (rtags-executable-find "rtags-rc"))))
+		 (shell-command (concat rtags-exec-path " -J " root-dir) nil "*Rtags Index Errors*")))
 
   ;; ----------------------------------------------------------
   ;; Hooks for `c-mode' and `c++-mode'

@@ -280,6 +280,9 @@ $ brew install mplayer
 # Plugin for w3m
 $ brew install w3m
 
+# Plugins for c&c++ mode
+$ brew install rtags
+
 # Plugins for go mode
 $ go get github.com/rogpeppe/godef
 $ go get golang.org/x/tools/cmd/gorename
