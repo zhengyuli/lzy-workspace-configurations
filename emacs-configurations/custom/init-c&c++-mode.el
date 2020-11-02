@@ -1,5 +1,5 @@
 ;;; package --- init-c&c++-mode.el ---
-;; Time-stamp: <2020-10-30 17:05:24 Friday by lizhengyu>
+;; Time-stamp: <2020-11-02 11:46:19 Monday by lizhengyu>
 
 ;; Copyright (C) 2014 zhengyu li
 ;;
@@ -54,9 +54,9 @@
   ;; ----------------------------------------------------------
   ;; Custom functions
   (defun rtags-cmake-export-commands (root-dir)
-	"Call `cmake' to export compilation commands for rtags to index."
+	"Call `cmake' to export `compile_commands.json' for rtags to index."
 	(interactive (list (read-directory-name "Project root directory: " "./")))
-	(shell-command (concat "cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1 " root-dir) nil "*Cmake Export Errors*"))
+	(shell-command (concat "cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1 " root-dir) nil "*_CMAKE_Export_Errors_*"))
 
   (defun rtags-index-project (root-dir)
 	"Call `rtags-rc' to index project."
@@ -64,7 +64,11 @@
 	(let ((rtags-exec-path (if (rtags-executable-find "rc")
 							   (rtags-executable-find "rc")
 							 (rtags-executable-find "rtags-rc"))))
-		 (shell-command (concat rtags-exec-path " -J " root-dir) nil "*Rtags Index Errors*")))
+	  (if (not (file-exists-p (expand-file-name "compile_commands.json" root-dir)))
+		  (cond ((file-exists-p (expand-file-name "CMakeLists.txt" root-dir))
+				 (rtags-cmake-export-commands root-dir))
+				(t (error "Unsupported C/C++ project, should be managed by cmake..."))))
+	  (shell-command (concat rtags-exec-path " -J " root-dir) nil "*_RTAGS_Index_Errors_*")))
 
   ;; ----------------------------------------------------------
   ;; Hooks for `c-mode' and `c++-mode'
