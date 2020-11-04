@@ -1,5 +1,5 @@
 ;;; package --- init-c&c++-mode.el ---
-;; Time-stamp: <2020-11-04 15:29:11 Wednesday by lizhengyu>
+;; Time-stamp: <2020-11-04 16:03:49 Wednesday by lizhengyu>
 
 ;; Copyright (C) 2014 zhengyu li
 ;;
@@ -61,6 +61,7 @@
   ;; Require
   (require 'ctypes)
   (require 'rtags-xref)
+  (require 'flycheck-rtags)
   (require 'company-rtags)
   (require 'google-c-style)
 
@@ -69,7 +70,6 @@
   (customize-set-variable 'ctypes-file-name "~/.emacs.d/ctypes")
   (customize-set-variable 'ctypes-write-types-at-exit t)
   (customize-set-variable 'rtags-completions-enabled t)
-  (customize-set-variable 'rtags-autostart-diagnostics t)
 
   ;; Enable google style newline indent
   (google-make-newline-indent)
@@ -80,7 +80,7 @@
 	(add-hook hook (lambda ()
 					 (ctypes-auto-parse-mode 1)
 					 (ctypes-read-file nil nil t t)
-					 (rtags-diagnostics t)
+					 (flycheck-select-checker 'rtags)
 					 (make-local-variable 'company-backends)
 					 (add-to-list 'company-backends (append-backend-with-yas 'company-rtags))
 					 (rtags-start-process-unless-running)
