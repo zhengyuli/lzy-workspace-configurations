@@ -1,5 +1,5 @@
 ;;; package --- init-c&c++-mode.el ---
-;; Time-stamp: <2020-11-04 15:24:48 Wednesday by lizhengyu>
+;; Time-stamp: <2020-11-04 15:29:11 Wednesday by lizhengyu>
 
 ;; Copyright (C) 2014 zhengyu li
 ;;
@@ -44,9 +44,9 @@
 (defun rtags-index-project (root-dir)
   "Call `rtags-rc' to index project."
   (interactive (list (read-directory-name "Project root directory: " "./")))
-  (let ((rtags-exec-path (if (rtags-executable-find "rc")
-							 (rtags-executable-find "rc")
-						   (rtags-executable-find "rtags-rc")))
+  (let ((rtags-exec-path (if (executable-find "rc")
+							 (executable-find "rc")
+						   (executable-find "rtags-rc")))
 		(source-dir root-dir)
 		(build-dir (expand-file-name ".cmake_rtags_build" root-dir)))
 	(if (not (file-exists-p (expand-file-name "compile_commands.json" build-dir)))
