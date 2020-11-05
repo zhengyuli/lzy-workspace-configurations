@@ -1,5 +1,5 @@
 ;;; package --- init-c&c++-mode.el ---
-;; Time-stamp: <2020-11-04 16:03:49 Wednesday by lizhengyu>
+;; Time-stamp: <2020-11-05 19:54:11 Thursday by lizhengyu>
 
 ;; Copyright (C) 2014 zhengyu li
 ;;
@@ -70,6 +70,7 @@
   (customize-set-variable 'ctypes-file-name "~/.emacs.d/ctypes")
   (customize-set-variable 'ctypes-write-types-at-exit t)
   (customize-set-variable 'rtags-completions-enabled t)
+  (customize-set-variable 'rtags-autostart-diagnostics t)
 
   ;; Enable google style newline indent
   (google-make-newline-indent)

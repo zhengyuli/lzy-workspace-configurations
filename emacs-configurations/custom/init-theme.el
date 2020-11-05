@@ -1,5 +1,5 @@
 ;;; package --- init-theme.el ---
-;; Time-stamp: <2018-12-10 22:48:21 Monday by lli>
+;; Time-stamp: <2020-11-05 19:49:05 Thursday by lizhengyu>
 
 ;; Copyright (C) 2018 zhengyu li
 ;;
@@ -157,7 +157,7 @@
  '(glyphless-char ((t :height 0.6)))
 
  ;; Basic face used to highlight errors and to denote failure
- '(error ((t :foreground "#FF0000" :weight bold :inverse-video t)))
+ '(error ((t :foreground "#FF0000" :weight bold)))
 
  ;; Basic face used to highlight warnings
  '(warning ((t :foreground "#FF7F00" :weight bold)))
@@ -233,7 +233,7 @@
 
  ;; Face name to use for preprocessor directives
  '(font-lock-preprocessor-face ((t :foreground "#FF337F" :weight bold)))
- 
+
  ;; Font Lock mode face for backslashes in Lisp regexp grouping constructs
  '(font-lock-regexp-grouping-backslash ((t :weight bold)))
 
