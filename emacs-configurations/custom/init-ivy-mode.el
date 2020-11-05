@@ -1,5 +1,5 @@
 ;;; package --- init-ivy-mode.el ---
-;; Time-stamp: <2019-03-14 15:16:44 Thursday by lli>
+;; Time-stamp: <2020-11-05 10:04:36 Thursday by lizhengyu>
 
 ;; Copyright (C) 2013 zhengyu li
 ;;
@@ -46,7 +46,8 @@
 ;; ==================================================================================
 ;; Global key bindings for `ivy'
 (lazy-set-key
- '(("M-x" . counsel-M-x)
+ '(("C-s" . swiper)
+   ("M-x" . counsel-M-x)
    ("C-x C-f" . counsel-find-file)
    ("C-x b" . ivy-switch-buffer)
    ("C-x B" . counsel-recentf)))
