@@ -1,5 +1,5 @@
 ;;; package --- init-theme.el ---
-;; Time-stamp: <2020-11-05 19:49:05 Thursday by lizhengyu>
+;; Time-stamp: <2020-11-06 11:10:02 Friday by lizhengyu>
 
 ;; Copyright (C) 2018 zhengyu li
 ;;
@@ -196,16 +196,16 @@
 
  ;;; Font lock faces ----------------------------------------------------------------
  ;; Face name to use for comments
- '(font-lock-comment-face ((t :foreground "#969896" :slant italic)))
+ '(font-lock-comment-face ((t :foreground "#FFFFF0" :slant italic)))
 
  ;; Face name to use for comment delimiters
- '(font-lock-comment-delimiter-face ((t :foreground "#969896" :slant italic)))
+ '(font-lock-comment-delimiter-face ((t :foreground "#FFFFF0" :slant italic)))
 
  ;; Face name to use for strings
  '(font-lock-string-face ((t :foreground "#FFD700" :slant italic)))
 
  ;; Face name to use for documentation
- '(font-lock-doc-face ((t :foreground "#969896" :slant italic)))
+ '(font-lock-doc-face ((t :foreground "#FFFFF0" :slant italic)))
 
  ;; Face name to use for keywords
  '(font-lock-keyword-face ((t :foreground "#FF337F" :slant italic)))
@@ -217,7 +217,7 @@
  '(font-lock-function-name-face ((t :foreground "#50BB00" :height 1.1)))
 
   ;; Face name to use for variable names
- '(font-lock-variable-name-face ((t :foreground "#E5E5E5")))
+ '(font-lock-variable-name-face ((t :foreground "#3A5FCD")))
 
  ;; Face name to use for type and class names
  '(font-lock-type-face ((t :foreground "#00BFFF")))
