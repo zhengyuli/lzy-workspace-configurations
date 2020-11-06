@@ -1,5 +1,5 @@
 ;;; package --- init-c&c++-mode.el ---
-;; Time-stamp: <2020-11-05 19:54:11 Thursday by lizhengyu>
+;; Time-stamp: <2020-11-06 10:42:29 Friday by lizhengyu>
 
 ;; Copyright (C) 2014 zhengyu li
 ;;
@@ -49,10 +49,9 @@
 						   (executable-find "rtags-rc")))
 		(source-dir root-dir)
 		(build-dir (expand-file-name ".cmake_rtags_build" root-dir)))
-	(if (not (file-exists-p (expand-file-name "compile_commands.json" build-dir)))
-		(cond ((file-exists-p (expand-file-name "CMakeLists.txt" source-dir))
-			   (rtags-cmake-export-commands source-dir))
-			  (t (error "Unsupported C/C++ project, should be managed by cmake..."))))
+	(cond ((file-exists-p (expand-file-name "CMakeLists.txt" source-dir))
+		   (rtags-cmake-export-commands source-dir))
+		  (t (error "Unsupported C/C++ project, should be managed by cmake...")))
 	(shell-command (concat rtags-exec-path " -J " build-dir) nil "*_RTAGS_Index_Errors_*")))
 
 (defun c&c++-mode-settings ()
