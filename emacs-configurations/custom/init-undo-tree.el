@@ -1,5 +1,5 @@
 ;;; package --- init-undo-tree.el ---
-;; Time-stamp: <2018-12-10 18:44:22 Monday by lli>
+;; Time-stamp: <2020-11-06 13:04:23 Friday by lizhengyu>
 
 ;; Copyright (C) 2013 zhengyu li
 ;;
@@ -40,7 +40,7 @@
  undo-tree-map)
 
 (lazy-set-key
- '(("M-O"  . undo-tree-visualize))
+ '(("M-_"  . undo-tree-visualize))
  undo-tree-map)
 
 ;; ==================================================================================
