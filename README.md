@@ -280,7 +280,7 @@ $ brew install mplayer
 # Plugin for w3m
 $ brew install w3m
 
-# Plugins for c&c++ mode
+# Plugins for c&c++ mode (please install the latest version)
 $ brew install rtags
 
 # Plugins for go mode
