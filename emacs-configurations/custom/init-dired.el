@@ -1,5 +1,5 @@
 ;;; package --- init-dired.el ---
-;; Time-stamp: <2018-12-21 14:24:42 Friday by lli>
+;; Time-stamp: <2020-11-09 18:39:22 Monday by lizhengyu>
 
 ;; Copyright (C) 2013 zhengyu li
 ;;
@@ -68,7 +68,9 @@
   (defun dired-up-directory-single ()
     "Return up directory in single window."
     (interactive)
-    (dired-single-buffer ".."))
+	(let ((dir (dired-current-directory)))
+	  (dired-single-buffer "..")
+	  (dired-goto-file dir)))
 
   (defun dired-backup-file ()
     "Backup file in current directory."
