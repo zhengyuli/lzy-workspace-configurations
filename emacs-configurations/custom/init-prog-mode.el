@@ -1,5 +1,5 @@
 ;;; package --- init-prog-mode.el ---
-;; Time-stamp: <2020-10-30 12:40:15 Friday by lizhengyu>
+;; Time-stamp: <2020-11-10 15:04:23 Tuesday by lizhengyu>
 
 ;; Copyright (C) 2018 zhengyu li
 ;;
@@ -98,7 +98,10 @@
   ;; ----------------------------------------------------------
   ;; Key bindings for `prog-mode-map'
   (lazy-set-key
-   '(("C-c C-c" . smart-comment)
+   '(("C-j" . newline-and-indent)
+	 ("<return>" . newline-and-indent)
+	 ("RET" . newline-and-indent)
+	 ("C-c C-c" . smart-comment)
      ("C-c k" . smart-uncomment)
      ("C-c M-a" . beginning-of-defun)
      ("C-c M-e" . end-of-defun)
