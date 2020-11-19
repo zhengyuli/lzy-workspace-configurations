@@ -1,6 +1,6 @@
 ;; -*- Emacs-Lisp -*-
 ;;; init.el ---
-;; Time-stamp: <2020-10-30 11:03:34 Friday by lizhengyu>
+;; Time-stamp: <2020-11-19 20:09:48 Thursday by lizhengyu>
 
 ;; Copyright (C) 2013 zhengyu li
 ;;
@@ -86,8 +86,8 @@ Look up all subdirs under `BASE-DIR' recrusively and add them into load path."
 (load-library "init-tramp")
 (load-library "init-emms")
 (load-library "init-w3m")
-(load-library "init-ivy-mode")
 (load-library "init-magit")
+(load-library "init-ivy-mode")
 (load-library "init-view-mode")
 (load-library "init-hexview-mode")
 (load-library "init-prog-mode")

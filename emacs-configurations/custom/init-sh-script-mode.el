@@ -1,5 +1,5 @@
 ;;; package --- init-sh-script-mode.el ---
-;; Time-stamp: <2018-12-10 18:43:57 Monday by lli>
+;; Time-stamp: <2020-11-19 20:07:39 Thursday by lizhengyu>
 
 ;; Copyright (C) 2014 zhengyu li
 ;;
@@ -34,11 +34,17 @@
 (defun sh-script-settings ()
   "Settings for `sh-script'."
 
+  ;; Require
+  (require 'dumb-jump)
+  (require 'lazy-set-key)
+
   ;; ----------------------------------------------------------
   ;; Key bindings for `sh-mode-map'
   (lazy-set-key
    '(("C-c C-f" . template-expand-template)
-     ("C-c C-c" . smart-comment))
+     ("C-c C-c" . smart-comment)
+	 ("M-." . dumb-jump-go)
+	 ("M-," . dumb-jump-back))
    sh-mode-map))
 
 (eval-after-load "sh-script" '(sh-script-settings))
