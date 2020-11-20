@@ -1,4 +1,4 @@
-# Oh My Mac Workspace
+# Oh My Workspace Configurations
 
 This guide includes all kinds of configurations of daily used tools on mac.
 
