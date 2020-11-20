@@ -1,5 +1,5 @@
 ;;; package --- init-prog-mode.el ---
-;; Time-stamp: <2020-11-10 15:04:23 Tuesday by lizhengyu>
+;; Time-stamp: <2020-11-20 15:33:48 Friday by lizhengyu>
 
 ;; Copyright (C) 2018 zhengyu li
 ;;
@@ -43,6 +43,7 @@
   (require 'flycheck)
   (require 'xref)
   (require 'etags)
+  (require 'dumb-jump)
   (require 'quickrun)
   (require 'aggressive-indent)
   (require 'whitespace-cleanup-mode)
@@ -91,9 +92,10 @@
         (setq tags-suffix (replace-regexp-in-string "[ ]+" "\" -o -name \"" tags-suffix)))
       (with-temp-buffer
         (cd tags-storage-directory)
+		(message "indexing tags ... .. .")
         (shell-command
          (format "find %s -name \"%s\" | xargs etags" tags-target-directory tags-suffix))
-        (message "Tags index..."))))
+        (message "tags index done!"))))
 
   ;; ----------------------------------------------------------
   ;; Key bindings for `prog-mode-map'
@@ -115,6 +117,9 @@
    prog-mode-map)
 
   ;; ----------------------------------------------------------
+  ;; Hooks for `xref'
+  (add-hook 'xref-backend-functions #'dumb-jump-xref-activate)
+
   ;; Hooks for `prog-mode'
   (add-hook 'prog-mode-hook
             (lambda ()

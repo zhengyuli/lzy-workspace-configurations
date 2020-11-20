@@ -252,14 +252,6 @@ pyenv shell 2.7.15
 pyenv virtualenvwrapper
 ```
 
-Append the following settings to your `~/.virtualenvs/postmkvirtualenv`:
-
-```
-pip install yapf
-pip install jedi
-pip install epc
-```
-
 ## Python
 
 macOS, like Linux, ships with Python already installed.
@@ -293,36 +285,43 @@ $ brew untap railwaycat/emacsmacport
 Installing emacs related dependencies:
 
 ```
-# Programs for multimedia
+# Dependencies for emacs multimedia
 $ brew install mplayer
-
-# Programs for w3m
+$
+# Dependencies for emacs w3m
 $ brew install w3m
-
-# Programs for dump-jump
+$
+# Dependencies for emacs easypg
+$ brew install gnupg
+$
+# Dependencies for emacs markdown
+$ brew install markdown
+$
+# Dependencies for emacs dump-jump
 $ brew install ripgrep
-
-# Programs for c&c++ mode (please install the latest version)
+$
+# Dependencies for emacs c&c++ mode (please install the latest version)
 $ brew install rtags
-
-# Programs for golang mode
+$
+# Dependencies for emacs golang mode
 $ go get github.com/rogpeppe/godef
 $ go get golang.org/x/tools/cmd/gorename
 $ go get golang.org/x/tools/cmd/guru
-
-# Programs for python mode
-$ pip install yapf
-$ pip install jedi
-$ pip install epc
-
-# Programs for easypg
-$ brew install gnupg
 ```
 
 #### Customization
 
-Running `./install.sh` to setup emacs configurations:
+Append the following settings to your `~/.virtualenvs/postmkvirtualenv`:
 
 ```
-$ ./install.sh
+# Dependencies for emacs python-mode
+pip install yapf
+pip install jedi
+pip install epc
+```
+
+Setup emacs configurations:
+
+```
+$ ./emacs/install.sh
 ```

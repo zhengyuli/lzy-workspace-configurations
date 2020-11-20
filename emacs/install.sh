@@ -4,7 +4,7 @@
 # Name: install.sh
 # Purpose: Emacs configurations setup script
 #
-# Time-stamp: <2020-10-30 10:34:53 Friday by lizhengyu>
+# Time-stamp: <2020-11-20 14:36:35 Friday by lizhengyu>
 #
 # Author: zhengyu li
 # Created: 2014-03-26
@@ -15,23 +15,17 @@
 source /etc/profile
 export LC_ALL=C
 
-set -e
+set -ex
 
 BASE_DIR=$(cd $(dirname $0); pwd)
 EMACS_CONFIG_FILE=$HOME/.emacs
 
-echo "Setup emacs configurations ... .. ."
-cp -fv ${BASE_DIR}/init.el ${BASE_DIR}/.emacs.local
+cp ${BASE_DIR}/init.el ${EMACS_CONFIG_FILE}
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
-	sed -i '' s:_EMACS_CONFIG_ROOT_PATH_:${BASE_DIR}/:g ${BASE_DIR}/.emacs.local
+	sed -i '' s:_EMACS_CONFIG_ROOT_PATH_:${BASE_DIR}/:g ${EMACS_CONFIG_FILE}
 else
-	sed -i s:_EMACS_CONFIG_ROOT_PATH_:${BASE_DIR}/:g ${BASE_DIR}/.emacs.local
+	sed -i s:_EMACS_CONFIG_ROOT_PATH_:${BASE_DIR}/:g ${EMACS_CONFIG_FILE}
 fi
-
-if [ -e $EMACS_CONFIG_FILE ]; then
-    rm $EMACS_CONFIG_FILE
-fi
-ln -sfv ${BASE_DIR}/.emacs.local $EMACS_CONFIG_FILE
 
 echo "Success!!"
