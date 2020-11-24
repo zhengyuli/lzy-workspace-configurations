@@ -1,5 +1,5 @@
 ;;; package --- init-multi-term.el ---
-;; Time-stamp: <2020-11-24 10:53:44 Tuesday by lizhengyu>
+;; Time-stamp: <2020-11-24 11:31:23 Tuesday by lizhengyu>
 
 ;; Copyright (C) 2013 zhengyu li
 ;;
@@ -73,7 +73,7 @@
                           '(("C-p" . term-send-raw)
                             ("C-n" . term-send-raw)
                             ("C-r" . term-send-raw)
-                            ("C-y" . term-send-yank)
+                            ("C-y" . term-paste)
                             ("M-f" . term-send-raw-meta)
                             ("M-b" . term-send-raw-meta)
                             ("M-d" . term-send-raw-meta)
