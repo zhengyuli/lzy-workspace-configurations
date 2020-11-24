@@ -1,5 +1,5 @@
-;;; package --- init-cua.el ---
-;; Time-stamp: <2018-12-10 18:41:40 Monday by lli>
+;;; package --- init-multiple-cursors ---
+;; Time-stamp: <2020-11-24 09:53:25 Tuesday by lizhengyu>
 
 ;; Copyright (C) 2013 zhengyu li
 ;;
@@ -26,18 +26,16 @@
 ;;
 
 ;; Put this file into your load-path and the following into your ~/.emacs:
-;;   (require 'init-cua)
+;;   (require 'init-multiple-cursors)
 
 ;;; Require:
-(require 'cua-base)
+(require 'multiple-cursors-autoloads)
 
 ;;; Code:
 ;; ==================================================================================
-;; Enable global cua selection mode
-(cua-selection-mode 1)
 
 ;; ==================================================================================
 ;;; Provide features
 (provide 'init-cua)
 
-;;; init-cua.el ends here
+;;; init-multiple-cursors ends here

@@ -4,7 +4,7 @@
 # Name: install.sh
 # Purpose: Emacs configurations setup script
 #
-# Time-stamp: <2020-11-20 14:36:35 Friday by lizhengyu>
+# Time-stamp: <2020-11-24 09:55:32 Tuesday by lizhengyu>
 #
 # Author: zhengyu li
 # Created: 2014-03-26
@@ -15,7 +15,7 @@
 source /etc/profile
 export LC_ALL=C
 
-set -ex
+set -e
 
 BASE_DIR=$(cd $(dirname $0); pwd)
 EMACS_CONFIG_FILE=$HOME/.emacs

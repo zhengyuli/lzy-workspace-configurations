@@ -1,6 +1,6 @@
 ;; -*- Emacs-Lisp -*-
 ;;; init.el ---
-;; Time-stamp: <2020-11-19 20:09:48 Thursday by lizhengyu>
+;; Time-stamp: <2020-11-24 09:55:19 Tuesday by lizhengyu>
 
 ;; Copyright (C) 2013 zhengyu li
 ;;
@@ -71,7 +71,7 @@ Look up all subdirs under `BASE-DIR' recrusively and add them into load path."
 (load-library "init-company-mode")
 (load-library "init-comint")
 (load-library "init-multi-term")
-(load-library "init-cua")
+(load-library "init-multiple-cursors")
 (load-library "init-iman")
 (load-library "init-ascii")
 (load-library "init-tty-format")
