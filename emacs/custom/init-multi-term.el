@@ -1,5 +1,5 @@
 ;;; package --- init-multi-term.el ---
-;; Time-stamp: <2018-12-10 18:43:41 Monday by lli>
+;; Time-stamp: <2020-11-24 10:53:44 Tuesday by lizhengyu>
 
 ;; Copyright (C) 2013 zhengyu li
 ;;
@@ -72,7 +72,6 @@
   (customize-set-variable 'term-bind-key-alist
                           '(("C-p" . term-send-raw)
                             ("C-n" . term-send-raw)
-                            ("C-h" . term-send-raw)
                             ("C-r" . term-send-raw)
                             ("C-y" . term-send-yank)
                             ("M-f" . term-send-raw-meta)
