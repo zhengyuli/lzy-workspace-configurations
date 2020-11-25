@@ -1,6 +1,6 @@
 ;; -*- Emacs-Lisp -*-
 ;;; init.el ---
-;; Time-stamp: <2020-11-24 09:55:19 Tuesday by lizhengyu>
+;; Time-stamp: <2020-11-25 17:49:03 Wednesday by lizhengyu>
 
 ;; Copyright (C) 2013 zhengyu li
 ;;
@@ -107,6 +107,7 @@ Look up all subdirs under `BASE-DIR' recrusively and add them into load path."
 (load-library "init-cmake-mode")
 (load-library "init-wangyi-music")
 (load-library "init-workgroups2")
+(load-library "init-proxy")
 (load-library "init-theme")
 
 ;; Load user custom settings finally

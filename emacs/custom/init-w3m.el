@@ -1,5 +1,5 @@
 ;;; package --- init-w3m.el ---
-;; Time-stamp: <2018-12-10 18:44:37 Monday by lli>
+;; Time-stamp: <2020-11-25 17:17:19 Wednesday by lizhengyu>
 
 ;; Copyright (C) 2013 zhengyu li
 ;;
@@ -33,17 +33,6 @@
 (require 'lazy-set-key)
 
 ;;; Code:
-;; ==================================================================================
-(defun set-proxy (&optional proxy)
-  "Set HTTP proxy to `PROXY'."
-  (interactive "sProxy Server:")
-  (if (string= proxy "")
-      (setenv "http_proxy" nil)
-    (if (string-match "^http://" proxy)
-        (setenv "http_proxy" proxy)
-      (setenv "http_proxy" (concat "http://" proxy)))
-    (message "set http proxy to %s" (getenv "http_proxy"))))
-
 ;; ==================================================================================
 (defun w3m-settings ()
   "Settings for `w3m'."
