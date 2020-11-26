@@ -1,6 +1,6 @@
 ;; -*- Emacs-Lisp -*-
 ;;; init.el ---
-;; Time-stamp: <2020-11-25 17:49:03 Wednesday by lizhengyu>
+;; Time-stamp: <2020-11-26 12:47:42 Thursday by lizhengyu>
 
 ;; Copyright (C) 2013 zhengyu li
 ;;
@@ -50,6 +50,12 @@
 ;; Emacs configuration default foreground
 (defconst emacs-config-default-foreground "#FFEFDF" "Emacs configuration default foreground.")
 
+;; Emacs configuration default fixed font
+(defconst emacs-config-default-fixed-font "Source Code Pro" "Emacs configuration default fixed font.")
+
+;; Emacs configuration default variable font
+(defconst emacs-config-default-variable-font "Sans Serif" "Emacs configuration default variable font.")
+
 (defun add-subdirs-to-load-path (base-dir)
   "Add subdirs to load path.
 Look up all subdirs under `BASE-DIR' recrusively and add them into load path."
@@ -63,6 +69,7 @@ Look up all subdirs under `BASE-DIR' recrusively and add them into load path."
 
 ;; Load librares
 (load-library "init-basic")
+(load-library "init-theme")
 (load-library "init-tabbar")
 (load-library "init-window-number")
 (load-library "init-kill-ring")
@@ -108,7 +115,6 @@ Look up all subdirs under `BASE-DIR' recrusively and add them into load path."
 (load-library "init-wangyi-music")
 (load-library "init-workgroups2")
 (load-library "init-proxy")
-(load-library "init-theme")
 
 ;; Load user custom settings finally
 (if (not (file-exists-p "~/.emacs.d/custom.el"))

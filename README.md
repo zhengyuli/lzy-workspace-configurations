@@ -311,6 +311,8 @@ $ go get golang.org/x/tools/cmd/guru
 
 #### Customization
 
+Install Source Code Pro font from: https://github.com/adobe-fonts/source-code-pro
+
 Append the following settings to your `~/.virtualenvs/postmkvirtualenv`:
 
 ```

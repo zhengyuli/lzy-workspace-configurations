@@ -1,5 +1,5 @@
 ;;; package --- init-theme.el ---
-;; Time-stamp: <2020-11-06 11:10:02 Friday by lizhengyu>
+;; Time-stamp: <2020-11-26 12:46:11 Thursday by lizhengyu>
 
 ;; Copyright (C) 2018 zhengyu li
 ;;
@@ -43,7 +43,10 @@
  ;; Basic default face.
  `(default ((t :background ,emacs-config-default-background
                :foreground ,emacs-config-default-foreground
-               :height 120 :family "Monaco")))
+			   :family ,emacs-config-default-fixed-font
+               :height 120
+			   :width normal
+			   :weight normal)))
 
  ;; Basic bold face
  '(bold ((t :weight bold)))
@@ -58,13 +61,13 @@
  '(underline ((t :underline t)))
 
  ;; The basic fixed pitch face
- '(fixed-pitch ((t :family "Monospace")))
+ '(fixed-pitch ((t :family ,emacs-config-default-fixed-font)))
 
  ;; The basic fixed pitch face with serifs
- '(fixed-pitch-serif ((t :family "Monospace Serif")))
+ '(fixed-pitch-serif ((t :family ,emacs-config-default-fixed-font)))
 
  ;; The basic variable-pitch face.
- '(variable-pitch ((t :family "Sans Serif")))
+ '(variable-pitch ((t :family ,emacs-config-default-variable-font)))
 
  ;; Basic face for shadowed text
  '(shadow ((t :foreground "#B3B3B3")))
