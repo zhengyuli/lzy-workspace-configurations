@@ -1,5 +1,5 @@
 ;;; package --- init-theme.el ---
-;; Time-stamp: <2020-11-26 12:46:11 Thursday by lizhengyu>
+;; Time-stamp: <2020-11-27 13:25:43 Friday by lizhengyu>
 
 ;; Copyright (C) 2018 zhengyu li
 ;;
@@ -97,22 +97,19 @@
  '(nobreak-space ((t :inverse-video t)))
 
  ;; Basic mode line face for selected window
- '(mode-line ((t :background "#8B0000" :foreground "#FFFFFF"
-                 :box (:line-width -1 :style released-button))))
+ '(mode-line ((t :background "#8B0000" :foreground "#FFFFFF")))
 
  ;; Basic mode line face for non-selected windows
- '(mode-line-inactive ((t :background "#666666" :foreground "#FFFFFF"
-                          :box (:line-width -1 :style released-button))))
+ '(mode-line-inactive ((t :background "#666666" :foreground "#FFFFFF")))
 
  ;; Basic mode line face for highlighting
- '(mode-line-highlight ((t :background "#8B0000" :foreground "#FFFFFF"
-                           :box (:line-width -1 :style released-button))))
+ '(mode-line-highlight ((t :background "#8B0000" :foreground "#FFFFFF")))
 
  ;; Face used to emphasize certain mode line features
  '(mode-line-emphasis ((t :weight bold)))
 
  ;; Face used for buffer identification parts of the mode line
- '(mode-line-buffer-id ((t :weight bold)))
+ '(mode-line-buffer-id ((t :weight bold :slant italic)))
 
  ;; Basic header-line face
  '(header-line ((t :background "#333333" :foreground "#E5E5E5")))

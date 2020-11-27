@@ -1,5 +1,5 @@
 ;;; package --- init-centaur-tabs.el ---
-;; Time-stamp: <2020-11-27 12:18:56 Friday by lizhengyu>
+;; Time-stamp: <2020-11-27 12:21:15 Friday by lizhengyu>
 
 ;; Copyright (C) 2013 zhengyu li
 ;;
@@ -45,6 +45,7 @@
 ;; Customize centaur tabs realted variables
 (customize-set-variable 'centaur-tabs-style "bar")
 (customize-set-variable 'centaur-tabs-set-icons t)
+(customize-set-variable 'centaur-tabs-set-close-button nil)
 (customize-set-variable 'centaur-tabs-cycle-scope 'tabs)
 
 (customize-set-variable 'uniquify-separator "/")
