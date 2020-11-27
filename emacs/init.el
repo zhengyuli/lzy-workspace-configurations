@@ -1,6 +1,6 @@
 ;; -*- Emacs-Lisp -*-
 ;;; init.el ---
-;; Time-stamp: <2020-11-27 11:11:10 Friday by lizhengyu>
+;; Time-stamp: <2020-11-27 17:25:28 Friday by lizhengyu>
 
 ;; Copyright (C) 2013 zhengyu li
 ;;
@@ -83,7 +83,7 @@ Look up all subdirs under `BASE-DIR' recrusively and add them into load path."
 (load-library "init-iman")
 (load-library "init-ascii")
 (load-library "init-tty-format")
-(load-library "init-moccur")
+(load-library "init-color-rg")
 (load-library "init-ispell")
 (load-library "init-template")
 (load-library "init-calendar")
