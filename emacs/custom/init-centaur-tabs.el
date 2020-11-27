@@ -1,5 +1,5 @@
 ;;; package --- init-centaur-tabs.el ---
-;; Time-stamp: <2020-11-27 12:21:15 Friday by lizhengyu>
+;; Time-stamp: <2020-11-27 15:55:42 Friday by lizhengyu>
 
 ;; Copyright (C) 2013 zhengyu li
 ;;
@@ -91,6 +91,9 @@ Return a list of one element based on major mode."
 	 )
 	((derived-mode-p 'eshell-mode)
 	 "EShell"
+	 )
+	((derived-mode-p 'w3m-mode)
+	 "W3m"
 	 )
 	((and (not (string-equal "*scratch*" (buffer-name)))
 		  (derived-mode-p 'emacs-lisp-mode))

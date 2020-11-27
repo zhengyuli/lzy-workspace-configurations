@@ -1,5 +1,5 @@
 ;;; package --- init-w3m.el ---
-;; Time-stamp: <2020-11-25 17:17:19 Wednesday by lizhengyu>
+;; Time-stamp: <2020-11-27 16:09:43 Friday by lizhengyu>
 
 ;; Copyright (C) 2013 zhengyu li
 ;;
@@ -48,13 +48,13 @@
   ;; ----------------------------------------------------------
   ;; Customize w3m related faces
   (custom-set-faces `(w3m-tab-background ((t (:background ,emacs-config-default-background)))))
-  (custom-set-faces '(w3m-tab-mouse ((t (:background "#999999" :foreground "#1A1A1A")))))
-  (custom-set-faces '(w3m-tab-selected ((t (:background "#8B0000" :foreground "#00BFFF")))))
-  (custom-set-faces '(w3m-tab-selected-background ((t (:background "#8B0000" :foreground "#00BFFF")))))
-  (custom-set-faces '(w3m-tab-selected-retrieving ((t (:background "#8B0000" :foreground "#00BFFF")))))
-  (custom-set-faces '(w3m-tab-unselected ((t (:background "#4D4D4D" :foreground "#CCCCCC")))))
-  (custom-set-faces '(w3m-tab-unselected-retrieving ((t (:background "#4D4d4d" :foreground "#CCCCCC")))))
-  (custom-set-faces '(w3m-tab-unselected-unseen ((t (:background "#4D4D4D" :foreground "#CCCCCC")))))
+  (custom-set-faces '(w3m-tab-mouse ((t (:background "#666666" :foreground "#FFD700")))))
+  (custom-set-faces '(w3m-tab-selected ((t (:background "#666666" :foreground "#00BFFF")))))
+  (custom-set-faces '(w3m-tab-selected-background ((t (:background "#666666" :foreground "#00BFFF")))))
+  (custom-set-faces '(w3m-tab-selected-retrieving ((t (:background "#666666" :foreground "#00BFFF")))))
+  (custom-set-faces '(w3m-tab-unselected ((t (:background "#333333" :foreground "#999999")))))
+  (custom-set-faces '(w3m-tab-unselected-retrieving ((t (:background "#333333" :foreground "#999999")))))
+  (custom-set-faces '(w3m-tab-unselected-unseen ((t (:background "#333333" :foreground "#999999")))))
 
   ;; Customize w3m related variables
   (customize-set-variable 'browse-url-browser-function 'w3m-browse-url)
@@ -81,14 +81,14 @@
      ("e" . w3m-edit-current-url)
      ("+" . w3m-zoom-in-image)
      ("-" . w3m-zoom-out-image)
+     ("n" . next-line)
+     ("p" . previous-line)
      ("<down>" . w3m-visual-scroll-up)
-     ("n" . w3m-visual-scroll-up)
      ("<up>" . w3m-visual-scroll-down)
-     ("p" . w3m-visual-scroll-down)
      ("h" . w3m-history)
      ("P" . w3m-view-previous-page)
      ("F" . w3m-view-next-page)
-     ("c" . w3m-delete-buffer-and-select-right)
+     ("c" . w3m-delete-buffer)
      ("C" . w3m-delete-other-buffers)
      ("d" . w3m-wget)
      ("o" . w3m-lnum-goto)
