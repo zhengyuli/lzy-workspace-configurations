@@ -1,6 +1,6 @@
 ;; -*- Emacs-Lisp -*-
 ;;; init.el ---
-;; Time-stamp: <2020-11-26 12:47:42 Thursday by lizhengyu>
+;; Time-stamp: <2020-11-27 11:11:10 Friday by lizhengyu>
 
 ;; Copyright (C) 2013 zhengyu li
 ;;
@@ -70,7 +70,8 @@ Look up all subdirs under `BASE-DIR' recrusively and add them into load path."
 ;; Load librares
 (load-library "init-basic")
 (load-library "init-theme")
-(load-library "init-tabbar")
+(load-library "init-powerline")
+(load-library "init-centaur-tabs")
 (load-library "init-window-number")
 (load-library "init-kill-ring")
 (load-library "init-undo-tree")
