@@ -1,5 +1,5 @@
 ;;; package --- init-window-number.el ---
-;; Time-stamp: <2018-12-10 18:44:48 Monday by lli>
+;; Time-stamp: <2020-11-27 13:44:09 Friday by lizhengyu>
 
 ;; Copyright (C) 2016 zhengyu li
 ;;
@@ -34,9 +34,9 @@
 ;;; Code:
 ;; ==================================================================================
 ;; Customize window number related variables
-(customize-set-variable 'window-number-active-foreground "#00BFFF")
+(customize-set-variable 'window-number-active-foreground "blue")
 (customize-set-variable 'window-number-active-background nil)
-(customize-set-variable 'window-number-inactive-foreground "#00BFFF")
+(customize-set-variable 'window-number-inactive-foreground "blue")
 (customize-set-variable 'window-number-inactive-background nil)
 
 ;; ==================================================================================

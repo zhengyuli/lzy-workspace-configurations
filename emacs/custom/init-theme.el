@@ -1,5 +1,5 @@
 ;;; package --- init-theme.el ---
-;; Time-stamp: <2020-11-27 13:25:43 Friday by lizhengyu>
+;; Time-stamp: <2020-11-27 13:51:21 Friday by lizhengyu>
 
 ;; Copyright (C) 2018 zhengyu li
 ;;
@@ -100,7 +100,7 @@
  '(mode-line ((t :background "#8B0000" :foreground "#FFFFFF")))
 
  ;; Basic mode line face for non-selected windows
- '(mode-line-inactive ((t :background "#666666" :foreground "#FFFFFF")))
+ '(mode-line-inactive ((t :background "gray" :foreground "black")))
 
  ;; Basic mode line face for highlighting
  '(mode-line-highlight ((t :background "#8B0000" :foreground "#FFFFFF")))
