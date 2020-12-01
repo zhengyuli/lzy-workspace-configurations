@@ -1,5 +1,5 @@
 ;;; package --- init-centaur-tabs.el ---
-;; Time-stamp: <2020-11-27 15:55:42 Friday by lizhengyu>
+;; Time-stamp: <2020-12-01 14:59:39 Tuesday by lizhengyu>
 
 ;; Copyright (C) 2013 zhengyu li
 ;;
@@ -36,11 +36,12 @@
 ;;; Code:
 ;; ==================================================================================
 ;; Customize centaur tabs realted faces
-(custom-set-faces `(centaur-tabs-default ((t :background ,emacs-config-default-background))))
-(custom-set-faces '(centaur-tabs-unselected ((t :background "#333333" :foreground "#999999"))))
-(custom-set-faces '(centaur-tabs-selected ((t :background "#666666" :foreground "#00BFFF"))))
-(custom-set-faces '(centaur-tabs-unselected-modified	((t :background "#333333" :foreground "#FFD700"))))
-(custom-set-faces '(centaur-tabs-selected-modified ((t :background "#666666" :foreground "#FFD700"))))
+(custom-set-faces
+ `(centaur-tabs-default ((t :background ,emacs-config-default-background)))
+ '(centaur-tabs-unselected ((t :background "#333333" :foreground "#999999")))
+ '(centaur-tabs-selected ((t :background "#666666" :foreground "#00BFFF")))
+ '(centaur-tabs-unselected-modified	((t :background "#333333" :foreground "#FFD700")))
+ '(centaur-tabs-selected-modified ((t :background "#666666" :foreground "#FFD700"))))
 
 ;; Customize centaur tabs realted variables
 (customize-set-variable 'centaur-tabs-style "bar")

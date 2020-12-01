@@ -1,5 +1,5 @@
 ;;; package --- init-dired.el ---
-;; Time-stamp: <2020-11-09 18:39:22 Monday by lizhengyu>
+;; Time-stamp: <2020-12-01 14:57:51 Tuesday by lizhengyu>
 
 ;; Copyright (C) 2013 zhengyu li
 ;;
@@ -146,31 +146,33 @@ If `WITH-FULL-PATH' is t and `ONLY-PATH' is t, return only file path."
 
   ;; ----------------------------------------------------------
   ;; Customize dired related faces
-  (custom-set-faces '(dired-directory ((t :foreground "#00AAFF" :height 1.1))))
-  (custom-set-faces '(dired-flagged ((t (:foreground "#FF0000" :height 1.1)))))
-  (custom-set-faces '(dired-header ((t (:foreground "#EE0000" :height 1.1)))))
-  (custom-set-faces '(dired-ignored ((t (:foreground "#FFFFFF" :height 1.1)))))
-  (custom-set-faces '(dired-mark ((t (:foreground "#FF1493" :height 1.1)))))
-  (custom-set-faces '(dired-marked ((t (:foreground "#FFFF00" :height 1.1)))))
-  (custom-set-faces '(dired-perm-write ((t (:foreground "#FF0000" :height 1.1)))))
-  (custom-set-faces '(dired-symlink ((t (:foreground "#999999" :height 1.1)))))
-  (custom-set-faces '(dired-warning ((t (:foreground "#FFD700" :height 1.1)))))
+  (custom-set-faces
+   '(dired-directory ((t :foreground "#00AAFF" :height 1.1)))
+   '(dired-flagged ((t (:foreground "#FF0000" :height 1.1))))
+   '(dired-header ((t (:foreground "#EE0000" :height 1.1))))
+   '(dired-ignored ((t (:foreground "#FFFFFF" :height 1.1))))
+   '(dired-mark ((t (:foreground "#FF1493" :height 1.1))))
+   '(dired-marked ((t (:foreground "#FFFF00" :height 1.1))))
+   '(dired-perm-write ((t (:foreground "#FF0000" :height 1.1))))
+   '(dired-symlink ((t (:foreground "#999999" :height 1.1))))
+   '(dired-warning ((t (:foreground "#FFD700" :height 1.1)))))
 
   ;; Customize dired filetype related faces
-  (custom-set-faces '(dired-filetype-js ((t (:foreground "#00FF00" :height 1.1)))))
-  (custom-set-faces '(dired-filetype-xml ((t (:foreground "#00FF00" :height 1.1)))))
-  (custom-set-faces '(dired-filetype-omit ((t (:foreground "#B3B3B3" :height 1.1)))))
-  (custom-set-faces '(dired-filetype-link ((t (:foreground "#FFFF00" :height 1.1)))))
-  (custom-set-faces '(dired-filetype-music ((t (:foreground "#00FFFF" :height 1.1)))))
-  (custom-set-faces '(dired-filetype-video ((t (:foreground "#FF337F" :height 1.1)))))
-  (custom-set-faces '(dired-filetype-plain ((t (:foreground "#FFFFFF" :height 1.1)))))
-  (custom-set-faces '(dired-filetype-image ((t (:foreground "#BB0000" :height 1.1)))))
-  (custom-set-faces '(dired-filetype-source ((t (:foreground "#00FF00" :height 1.1)))))
-  (custom-set-faces '(dired-filetype-common ((t (:foreground "#FFC0CB" :height 1.1)))))
-  (custom-set-faces '(dired-filetype-execute ((t (:foreground "#FF0000" :height 1.1)))))
-  (custom-set-faces '(dired-filetype-program ((t (:foreground "#EE0000" :height 1.1)))))
-  (custom-set-faces '(dired-filetype-document ((t (:foreground "#AAAAFF" :height 1.1)))))
-  (custom-set-faces '(dired-filetype-compress ((t (:foreground "#FFD700" :height 1.1)))))
+  (custom-set-faces
+   '(dired-filetype-js ((t (:foreground "#00FF00" :height 1.1))))
+   '(dired-filetype-xml ((t (:foreground "#00FF00" :height 1.1))))
+   '(dired-filetype-omit ((t (:foreground "#B3B3B3" :height 1.1))))
+   '(dired-filetype-link ((t (:foreground "#FFFF00" :height 1.1))))
+   '(dired-filetype-music ((t (:foreground "#00FFFF" :height 1.1))))
+   '(dired-filetype-video ((t (:foreground "#FF337F" :height 1.1))))
+   '(dired-filetype-plain ((t (:foreground "#FFFFFF" :height 1.1))))
+   '(dired-filetype-image ((t (:foreground "#BB0000" :height 1.1))))
+   '(dired-filetype-source ((t (:foreground "#00FF00" :height 1.1))))
+   '(dired-filetype-common ((t (:foreground "#FFC0CB" :height 1.1))))
+   '(dired-filetype-execute ((t (:foreground "#FF0000" :height 1.1))))
+   '(dired-filetype-program ((t (:foreground "#EE0000" :height 1.1))))
+   '(dired-filetype-document ((t (:foreground "#AAAAFF" :height 1.1))))
+   '(dired-filetype-compress ((t (:foreground "#FFD700" :height 1.1)))))
 
   ;; Customize dired related variables
   (customize-set-variable 'dired-dwim-target t)

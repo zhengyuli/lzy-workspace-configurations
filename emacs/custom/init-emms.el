@@ -1,5 +1,5 @@
 ;;; package --- init-emms.el ---
-;; Time-stamp: <2019-09-11 10:15:32 Wednesday by lli>
+;; Time-stamp: <2020-12-01 14:55:42 Tuesday by lizhengyu>
 
 ;; Copyright (C) 2013 zhengyu li
 ;;
@@ -55,8 +55,9 @@
 
   ;; ----------------------------------------------------------
   ;; Customize emms related faces
-  (custom-set-faces '(emms-playlist-track-face ((t (:foreground "#00FF00")))))
-  (custom-set-faces '(emms-playlist-selected-face ((t (:foreground "#00FFFF")))))
+  (custom-set-faces
+   '(emms-playlist-track-face ((t (:foreground "#00FF00"))))
+   '(emms-playlist-selected-face ((t (:foreground "#00FFFF")))))
 
   ;; Customize emms related variables
   (customize-set-variable 'emms-player-list '(emms-player-mplayer emms-player-mpg321 emms-player-ogg123))

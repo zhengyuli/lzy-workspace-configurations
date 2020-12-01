@@ -1,5 +1,5 @@
 ;;; package --- init-w3m.el ---
-;; Time-stamp: <2020-11-27 16:09:43 Friday by lizhengyu>
+;; Time-stamp: <2020-12-01 14:58:56 Tuesday by lizhengyu>
 
 ;; Copyright (C) 2013 zhengyu li
 ;;
@@ -47,14 +47,15 @@
 
   ;; ----------------------------------------------------------
   ;; Customize w3m related faces
-  (custom-set-faces `(w3m-tab-background ((t (:background ,emacs-config-default-background)))))
-  (custom-set-faces '(w3m-tab-mouse ((t (:background "#666666" :foreground "#FFD700")))))
-  (custom-set-faces '(w3m-tab-selected ((t (:background "#666666" :foreground "#00BFFF")))))
-  (custom-set-faces '(w3m-tab-selected-background ((t (:background "#666666" :foreground "#00BFFF")))))
-  (custom-set-faces '(w3m-tab-selected-retrieving ((t (:background "#666666" :foreground "#00BFFF")))))
-  (custom-set-faces '(w3m-tab-unselected ((t (:background "#333333" :foreground "#999999")))))
-  (custom-set-faces '(w3m-tab-unselected-retrieving ((t (:background "#333333" :foreground "#999999")))))
-  (custom-set-faces '(w3m-tab-unselected-unseen ((t (:background "#333333" :foreground "#999999")))))
+  (custom-set-faces
+   `(w3m-tab-background ((t (:background ,emacs-config-default-background))))
+   '(w3m-tab-mouse ((t (:background "#666666" :foreground "#FFD700"))))
+   '(w3m-tab-selected ((t (:background "#666666" :foreground "#00BFFF"))))
+   '(w3m-tab-selected-background ((t (:background "#666666" :foreground "#00BFFF"))))
+   '(w3m-tab-selected-retrieving ((t (:background "#666666" :foreground "#00BFFF"))))
+   '(w3m-tab-unselected ((t (:background "#333333" :foreground "#999999"))))
+   '(w3m-tab-unselected-retrieving ((t (:background "#333333" :foreground "#999999"))))
+   '(w3m-tab-unselected-unseen ((t (:background "#333333" :foreground "#999999")))))
 
   ;; Customize w3m related variables
   (customize-set-variable 'browse-url-browser-function 'w3m-browse-url)

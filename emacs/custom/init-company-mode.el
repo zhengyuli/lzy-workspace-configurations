@@ -1,5 +1,5 @@
 ;;; package --- init-company-mode.el ---
-;; Time-stamp: <2020-10-30 14:58:01 Friday by lizhengyu>
+;; Time-stamp: <2020-12-01 14:56:11 Tuesday by lizhengyu>
 
 ;; Copyright (C) 2018 zhengyu li
 ;;
@@ -48,11 +48,12 @@
 
 ;; ==================================================================================
 ;; Customize company related faces
-(custom-set-faces '(company-tooltip ((t :background "#4D4D4D" ))))
-(custom-set-faces '(company-tooltip-selection ((t :background "#8b0000"))))
-(custom-set-faces '(company-tooltip-common ((t :foreground "#0000FF"))))
-(custom-set-faces '(company-scrollbar-fg ((t :inherit company-tooltip))))
-(custom-set-faces '(company-scrollbar-bg ((t :inherit company-tooltip))))
+(custom-set-faces
+ '(company-tooltip ((t :background "#4D4D4D" )))
+ '(company-tooltip-selection ((t :background "#8b0000")))
+ '(company-tooltip-common ((t :foreground "#0000FF")))
+ '(company-scrollbar-fg ((t :inherit company-tooltip)))
+ '(company-scrollbar-bg ((t :inherit company-tooltip))))
 
 ;; Customize company related variables
 (customize-set-variable 'company-idle-delay 0)
