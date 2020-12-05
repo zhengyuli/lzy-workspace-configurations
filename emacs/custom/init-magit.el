@@ -1,5 +1,5 @@
 ;;; package --- init-magit.el ---
-;; Time-stamp: <2020-12-01 14:52:58 Tuesday by lizhengyu>
+;; Time-stamp: <2020-12-05 23:48:22 Saturday by zhengyuli>
 
 ;; Copyright (C) 2013 zhengyu li
 ;;
@@ -45,10 +45,10 @@
 
 ;; Customize magit related faces
 (custom-set-faces
- '(magit-diff-added ((t (:background "#335533" :foreground "black"))))
- '(magit-diff-removed ((t (:background "#553333" :foreground "white"))))
- '(magit-diff-added-highlight ((t (:background "blue" :foreground "black"))))
- '(magit-diff-removed-highlight ((t (:background "#663333" :foreground "white")))))
+ '(magit-diff-added ((t (:background "#00AA00" :foreground "white"))))
+ '(magit-diff-removed ((t (:background "#FF7F00" :foreground "white"))))
+ '(magit-diff-added-highlight ((t (:background "#63B8FF" :foreground "black"))))
+ '(magit-diff-removed-highlight ((t (:background "#EEEE00" :foreground "black")))))
 
 ;; ==================================================================================
 ;;; Provide features

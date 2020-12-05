@@ -1,5 +1,5 @@
 ;;; package --- init-powerline.el ---
-;; Time-stamp: <2020-12-01 14:55:02 Tuesday by lizhengyu>
+;; Time-stamp: <2020-12-05 23:43:27 Saturday by zhengyuli>
 
 ;; Copyright (C) 2013 zhengyu li
 ;;
@@ -35,10 +35,10 @@
 ;; ==================================================================================
 ;; Customize centaur tabs realted faces
 (custom-set-faces
- '(powerline-active1 ((t (:background "yellow" :foreground "black"))))
- '(powerline-active2 ((t (:background "blue" :foreground "black"))))
- '(powerline-inactive1 ((t (:background "yellow" :foreground "black"))))
- '(powerline-inactive2 ((t (:background "blue" :foreground "black"))))
+ '(powerline-active1 ((t (:background "#FFD700" :foreground "black"))))
+ '(powerline-active2 ((t (:background "#63B8FF" :foreground "black"))))
+ '(powerline-inactive1 ((t (:background "#777777" :foreground "black"))))
+ '(powerline-inactive2 ((t (:background "#999999" :foreground "black"))))
  '(mode-line-buffer-id-inactive ((t :inherit mode-line-buffer-id))))
 
 (powerline-default-theme)

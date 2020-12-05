@@ -1,5 +1,5 @@
 ;;; package --- init-centaur-tabs.el ---
-;; Time-stamp: <2020-12-01 14:59:39 Tuesday by lizhengyu>
+;; Time-stamp: <2020-12-05 23:25:28 Saturday by zhengyuli>
 
 ;; Copyright (C) 2013 zhengyu li
 ;;
@@ -44,8 +44,11 @@
  '(centaur-tabs-selected-modified ((t :background "#666666" :foreground "#FFD700"))))
 
 ;; Customize centaur tabs realted variables
+(customize-set-variable 'centaur-tabs-height 26)
 (customize-set-variable 'centaur-tabs-style "bar")
 (customize-set-variable 'centaur-tabs-set-icons t)
+(customize-set-variable 'centaur-tabs-plain-icons t)
+(customize-set-variable 'centaur-tabs-gray-out-icons 'buffer)
 (customize-set-variable 'centaur-tabs-set-close-button nil)
 (customize-set-variable 'centaur-tabs-cycle-scope 'tabs)
 

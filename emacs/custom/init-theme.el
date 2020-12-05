@@ -1,5 +1,5 @@
 ;;; package --- init-theme.el ---
-;; Time-stamp: <2020-11-27 13:51:21 Friday by lizhengyu>
+;; Time-stamp: <2020-12-05 23:39:50 Saturday by zhengyuli>
 
 ;; Copyright (C) 2018 zhengyu li
 ;;
@@ -44,7 +44,7 @@
  `(default ((t :background ,emacs-config-default-background
                :foreground ,emacs-config-default-foreground
 			   :family ,emacs-config-default-fixed-font
-               :height 120
+               :height 160
 			   :width normal
 			   :weight normal)))
 
@@ -97,13 +97,13 @@
  '(nobreak-space ((t :inverse-video t)))
 
  ;; Basic mode line face for selected window
- '(mode-line ((t :background "#8B0000" :foreground "#FFFFFF")))
+ '(mode-line ((t :height 1.1 :background "#FF0000" :foreground "#FFFFFF")))
 
  ;; Basic mode line face for non-selected windows
- '(mode-line-inactive ((t :background "gray" :foreground "black")))
+ '(mode-line-inactive ((t :height 1.1 :background "gray" :foreground "black")))
 
  ;; Basic mode line face for highlighting
- '(mode-line-highlight ((t :background "#8B0000" :foreground "#FFFFFF")))
+ '(mode-line-highlight ((t :background "#FF0000" :foreground "#FFFFFF")))
 
  ;; Face used to emphasize certain mode line features
  '(mode-line-emphasis ((t :weight bold)))
