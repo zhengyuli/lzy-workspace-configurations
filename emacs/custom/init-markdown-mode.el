@@ -1,5 +1,5 @@
 ;;; package --- init-magit.el ---
-;; Time-stamp: <2018-12-10 23:43:10 Monday by lli>
+;; Time-stamp: <2021-03-01 09:18:56 Monday by lizhengyu>
 
 ;; Copyright (C) 2013 zhengyu li
 ;;
@@ -40,8 +40,11 @@
   (require 'markdownfmt)
 
   ;; ----------------------------------------------------------
-  ;; Enable syntax highlighting for inline LaTeX and itex expressions
+  ;; Customize markdown related variables
+  (customize-set-variable 'markdown-command "pandoc")
   (customize-set-variable 'markdown-enable-math t)
+
+
 
   ;; ----------------------------------------------------------
   ;; Enable markdownfmt on save

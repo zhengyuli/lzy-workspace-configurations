@@ -296,6 +296,7 @@ $ brew install gnupg
 $
 # Dependencies for emacs markdown
 $ brew install markdown
+$ brew install pandoc
 $
 # Dependencies for emacs dump-jump
 $ brew install ripgrep
