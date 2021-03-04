@@ -319,8 +319,12 @@ Append the following settings to your `~/.virtualenvs/postmkvirtualenv`:
 ```
 # Dependencies for emacs python-mode
 pip install yapf
-pip install jedi
+pip install jedi==0.17.2
 pip install epc
+pip install pylint
+
+# Other tools
+pip install ipython
 ```
 
 Setup emacs configurations:

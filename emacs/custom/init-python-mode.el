@@ -1,5 +1,5 @@
 ;;; package --- init-python-mode.el ---
-;; Time-stamp: <2021-03-04 04:57:28 Thursday by lizhengyu>
+;; Time-stamp: <2021-03-04 05:27:42 Thursday by lizhengyu>
 
 ;; Copyright (C) 2014 zhengyu li
 ;;
@@ -36,6 +36,7 @@
   "Settings for `python-mode'."
 
   ;; Require
+  (require 'flycheck)
   (require 'py-yapf)
   (require 'jedi-core)
   (require 'company-jedi)
@@ -45,13 +46,25 @@
   (require 'virtualenvwrapper)
 
   ;; ----------------------------------------------------------
+  (defun flycheck-virtualenv-set-python-executables ()
+	(let ((exec-path (python-shell-calculate-exec-path)))
+	  (setq-local flycheck-python-pylint-executable
+				  (executable-find "pylint"))
+	  (setq-local flycheck-python-flake8-executable
+				  (executable-find "flake8"))))
+
   (defun sphinx-doc-format ()
     (interactive)
     (sphinx-doc)
     (python-docstring-fill))
 
   (defadvice venv-workon (after venv-workon-after activate)
-    (jedi:stop-server))
+    (jedi:stop-server)
+	(flycheck-virtualenv-set-python-executables))
+
+  (defadvice venv-deactivate (after venv-deactivate-after activate)
+    (jedi:stop-server)
+	(flycheck-virtualenv-set-python-executables))
 
   (defalias 'python-format 'py-yapf-buffer)
 
@@ -79,7 +92,8 @@
               (add-to-list 'company-backends (append-backend-with-yas 'company-jedi))
               (sphinx-doc-mode 1)
               (python-docstring-mode 1)
-              (venv-initialize-interactive-shells))))
+              (venv-initialize-interactive-shells)
+			  (flycheck-virtualenv-set-python-executables))))
 
 (eval-after-load "python" '(python-mode-settings))
 
