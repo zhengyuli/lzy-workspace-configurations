@@ -1,5 +1,5 @@
 ;;; package --- init-python-mode.el ---
-;; Time-stamp: <2020-10-30 12:44:39 Friday by lizhengyu>
+;; Time-stamp: <2021-03-04 04:57:28 Thursday by lizhengyu>
 
 ;; Copyright (C) 2014 zhengyu li
 ;;
@@ -54,6 +54,10 @@
     (jedi:stop-server))
 
   (defalias 'python-format 'py-yapf-buffer)
+
+  ;; ----------------------------------------------------------
+  ;; Customize python mode related variables
+  (customize-set-variable 'python-indent-guess-indent-offset-verbose nil)
 
   ;; ----------------------------------------------------------
   ;; Key bindings for `python-mode-map'
