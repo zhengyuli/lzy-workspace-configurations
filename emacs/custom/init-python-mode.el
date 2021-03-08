@@ -1,5 +1,5 @@
 ;;; package --- init-python-mode.el ---
-;; Time-stamp: <2021-03-04 05:27:42 Thursday by lizhengyu>
+;; Time-stamp: <2021-03-05 05:28:23 Friday by lizhengyu>
 
 ;; Copyright (C) 2014 zhengyu li
 ;;
@@ -70,7 +70,7 @@
 
   ;; ----------------------------------------------------------
   ;; Customize python mode related variables
-  (customize-set-variable 'python-indent-guess-indent-offset-verbose nil)
+  (customize-set-variable 'python-indent-offset 4)
 
   ;; ----------------------------------------------------------
   ;; Key bindings for `python-mode-map'
