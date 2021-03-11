@@ -1,5 +1,5 @@
 ;;; package --- init-json-mode.el ---
-;; Time-stamp: <2018-12-10 18:43:14 Monday by lli>
+;; Time-stamp: <2021-03-11 03:26:49 Thursday by lizhengyu>
 
 ;; Copyright (C) 2018 zhengyu li
 ;;
@@ -42,8 +42,14 @@
   ;; ----------------------------------------------------------
   ;; Key bindings for `json-mode-map'
   (lazy-set-key
-   '(("C-x <tab>" . json-mode-beautify))
-   json-mode-map))
+   '(("C-x <tab>" . json-mode-beautify)
+	 ("C-x TAB" . json-mode-beautify))
+   json-mode-map)
+
+  ;; Hooks for `json-mode'
+  (add-hook 'json-mode-hook
+			(lambda ()
+			  (setq indent-tabs-mode nil))))
 
 (eval-after-load "json-mode" '(json-mode-settings))
 
